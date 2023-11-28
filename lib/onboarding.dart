@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'login_register_screen.dart';
+import 'login_screen.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class _OnboardingState extends State<Onboarding> {
             const SizedBox(height: 14,),
             GestureDetector(
               onTap: (){
-
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const LoginScreen()));
               },
               child: Container(
                 height: 51,

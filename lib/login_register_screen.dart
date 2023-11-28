@@ -1,3 +1,5 @@
+import 'package:adept_assignment3/login_screen.dart';
+import 'package:adept_assignment3/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginRegisterScreen extends StatelessWidget {
@@ -26,24 +28,31 @@ class LoginRegisterScreen extends StatelessWidget {
               const SizedBox(height: 104,),
               GestureDetector(
                 onTap: (){
-
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
                 },
-                child: Container(
-                  height: 51,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
+                  },
+                  child: Container(
+                    height: 51,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12)
+                    ),
+                    child: const Center(child: Text('Login',
+                      style: TextStyle(color:Color(0xffffffff),
+                          fontWeight: FontWeight.w400,fontSize: 20),)),
                   ),
-                  child: const Center(child: Text('Login',
-                    style: TextStyle(color:Color(0xffffffff),
-                        fontWeight: FontWeight.w400,fontSize: 20),)),
                 ),
               ),
               const SizedBox(height: 24,),
 
               GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>RegisterScreen()));
+                },
                 child: Container(
                   height: 51,
                   width: double.infinity,
